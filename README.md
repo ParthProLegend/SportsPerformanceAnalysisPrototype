@@ -110,16 +110,17 @@ The result is converted from radians to degrees. If θ > 180°, it is remapped t
 Each exercise uses a two-state finite state machine:
 
 ```
-         angle > threshold_up
-  ┌────────────────────────────┐
-  │                            ▼
-┌─┴──┐                      ┌──────┐
-│DOWN│                      │  UP  │
-└─┬──┘                      └──┬───┘
-  ▲                            │
-  │   angle < threshold_down   │
-  │   (rep_counter += 1)       │
-  └────────────────────────────┘
+        angle > threshold_up
+   ┌─────────────────────────────┐
+   │                             │
+   │                             ▼
+┌──┴───┐                      ┌──────┐
+│ DOWN │                      │  UP  │
+└──────┘                      └──┬───┘
+   ▲                             │
+   │   angle < threshold_down    │
+   │   (rep_counter += 1)        │
+   └─────────────────────────────┘
 ```
 
 - **UP → DOWN transition** (angle crosses below `threshold_down`): a valid repetition is counted.
