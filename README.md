@@ -191,38 +191,52 @@ Tracks the **left elbow angle** (shoulder → elbow → wrist):
 ### Prerequisites
 - Python 3.8 or higher
 - A working webcam (built-in or USB)
+- GPU to run MediaPipe
 
 ### Installation
 
-On **Windows**, the easiest way to run after cloning is:
+#### Option A — One-command (Windows)
 
+From the project root, run:
 
-```bash
-# (Recommended) It activates .venv via ps1 installs dependencies from requirements.txt and runs the program automatically
+```bat
 run_windows.bat
 ```
-or double-click it.
+
+What it does:
+- Creates `.venv` if it doesn’t exist (`python -m venv .venv`).
+- Activates the venv using PowerShell.
+- Installs dependencies from `requirements.txt`.
+- Runs `src/SportsPerformance/main.py`.
+
+If activation fails on your machine, use **Option B** (manual activation) or run the script from an elevated PowerShell.
+
+You can also double-click `run_windows.bat` in File Explorer.
+
+#### Option B — Manual setup (any OS)
 
 ```bash
 # Clone the repository
 git clone https://github.com/ParthProLegend/SportsPerformanceAnalysisPrototype
 cd SportsPerformanceAnalysisPrototype
 
-# (Alternative) Install dependencies from requirements.txt
-pip install -r requirements.txt
+# Create and activate a virtual environment (recommended)
+python -m venv .venv
+
+# Windows (PowerShell)
+# .\.venv\Scripts\Activate.ps1
+
+# Windows (cmd)
+# .\.venv\Scripts\activate.bat
+
+# macOS/Linux
+# source .venv/bin/activate
+
+# Install dependencies
+python -m pip install -r requirements.txt
 ```
 
 ### Running the Application
-
-On **Windows**, the easiest way is:
-
-```bash
-run_windows.bat
-```
-
-This batch script typically activates the virtual environment (if configured) and runs the main application with the correct working directory.
-
-Alternatively, you can run the application manually from the project root:
 
 ```bash
 cd src/SportsPerformance
