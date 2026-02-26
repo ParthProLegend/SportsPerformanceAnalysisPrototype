@@ -1,9 +1,9 @@
 main_old.py
 
 .venv312
+.venv
 
 run_linux.sh
-run_windows.bat
 
 desktop.ini
 
