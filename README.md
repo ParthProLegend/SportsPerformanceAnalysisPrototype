@@ -170,7 +170,7 @@ SportsPerformanceAnalysisPrototype/
 ### Simple Squat
 Tracks the knee angle on one side of the body using default thresholds.
 
-### Advanced Squat (Hindu Squat)
+### Advanced Squat (Hindu Squat/Uthak Baithak)
 Extends the simple squat with configurable parameters:
 
 | Parameter | Default | Description |
