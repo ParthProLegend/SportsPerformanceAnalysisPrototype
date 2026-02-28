@@ -39,7 +39,7 @@ def main():
         return
 
     # cap = cv2.VideoCapture(url)  # Initialize remote webcam as webcam
-    cap = cv2.VideoCapture(0)  # Initialize local webcam
+    cap = cv2.VideoCapture(r"C:\Users\reaper\Downloads\Chrome Downloads\How to Perform the Hindu Squat.mp4")  # Initialize local webcam
     cap.set(3, 1920) # width
     cap.set(4, 1080)  # height
 
